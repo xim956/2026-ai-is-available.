@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 AI替代工作大全｜职业风险盘点｜AI局势深度解说</title>
+<style>
+:root{
+    --main:#2563eb;
+    --main-dark:#1d4ed8;
+    --bg:#f4f7fb;
+    --card:#ffffff;
+    --text:#1f2937;
+    --text-gray:#6b7280;
+    --border:#e5e7eb;
+    --shadow:0 2px 12px rgba(0,0,0,0.06);
+    --high:#eff6ff;
+}
+[data-theme="dark"]{
+    --main:#3b82f6;
+    --main-dark:#2563eb;
+    --bg:#0f172a;
+    --card:#1e293b;
+    --text:#e2e8f0;
+    --text-gray:#94a3b8;
+    --border:#334155;
+    --shadow:0 2px 14px rgba(0,0,0,0.25);
+    --high:#1e3a5f;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+    font-family:"Microsoft YaHei",PingFang SC,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    transition:background 0.3s ease,color 0.3s ease;
+}
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:99;
+    background:var(--card);
+    border-bottom:1px solid var(--border);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 20px;
+    height:64px;
+}
+.logo{
+    font-size:20px;
+    font-weight:bold;
+    color:var(--main);
+}
+.nav-menu{
+    display:flex;
+    gap:10px;
+}
+.nav-menu a{
+    text-decoration:none;
+    color:var(--text-gray);
+    font-size:14px;
+    padding:8px 14px;
+    border-radius:22px;
+    transition:0.25s;
+}
+.nav-menu a.active{
+    background:var(--main);
+    color:#fff;
+}
+.nav-menu a:hover{
+    background:var(--high);
+    color:var(--main);
+}
+.theme-btn{
+    border:none;
+    background:none;
+    font-size:18px;
+    cursor:pointer;
+    color:var(--text);
+}
+.container{
+    max-width:1340px;
+    margin:24px auto;
+    padding:0 18px;
+}
+.search-box{
+    display:flex;
+    gap:12px;
+    margin-bottom:28px;
+}
+.search-box input{
+    flex:1;
+    padding:14px 20px;
+    border:1px solid var(--border);
+    border-radius:28px;
+    background:var(--card);
+    color:var(--text);
+    outline:none;
+    font-size:14px;
+}
+.search-box button{
+    padding:14px 24px;
+    border:none;
+    border-radius:28px;
+    background:var(--main);
+    color:#fff;
+    cursor:pointer;
+    transition:0.2s;
+}
+.search-box button:hover{
+    background:var(--main-dark);
+}
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(380px,1fr));
+    gap:24px;
+}
+.card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:24px;
+    box-shadow:var(--shadow);
+    transition:0.25s;
+}
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 8px 26px rgba(0,0,0,0.08);
+}
+.iframe-video{
+    width:100%;
+    height:220px;
+    border-radius:14px;
+    border:none;
+    margin-bottom:14px;
+}
+.ai-comment{
+    background:var(--high);
+    padding:14px;
+    border-radius:14px;
+    margin:12px 0;
+    font-size:14px;
+    line-height:1.7;
+    color:var(--main-dark);
+}
+.card h3{
+    color:var(--main);
+    margin-bottom:12px;
+    font-size:18px;
+}
+.tag-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    margin-bottom:14px;
+}
+.tag{
+    font-size:12px;
+    padding:4px 10px;
+    border-radius:14px;
+    background:var(--high);
+    color:var(--main);
+}
+.card p{
+    font-size:14px;
+    color:var(--text-gray);
+    line-height:1.75;
+}
+.footer{
+    text-align:center;
+    padding:32px;
+    font-size:13px;
+    color:var(--text-gray);
+    border-top:1px solid var(--border);
+    margin-top:40px;
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="logo">🤖 2026 AI替代工作解说大全</div>
+    <div class="nav-menu">
+        <a href="#" class="active" data-all>全部职业</a>
+        <a href="#" data-office>文职办公类</a>
+        <a href="#" data-design>设计创作类</a>
+        <a href="#" data-service>服务基础类</a>
+        <a href="#" data-tech>技术编程类</a>
+    </div>
+    <button class="theme-btn" id="themeBtn">🌙</button>
+</div>
+
+<div class="container">
+    <div class="search-box">
+        <input id="searchInput" placeholder="搜索：被AI替代的职业、风险岗位、2026就业趋势">
+        <button id="searchBtn">搜索解说</button>
+    </div>
+
+    <div class="grid" id="cardList">
+
+<!-- 1. 文职办公类 -->
+<div class="card" data-type="office">
+    <iframe class="iframe-video" src="https://player.bilibili.com/player.html?aid=11345456&cid=20000000&page=1" allowfullscreen></iframe>
+    <div class="ai-comment">🤖 AI局势解说：2026年基础文职是最先被替代的岗位，重复劳动无竞争力。表格、归档、公文AI一键完成，人工成本高、效率低。文员必须学习AI工具，转型人事、管理岗才能留存。</div>
+    <h3>文职办公类｜行政文员/数据录入/档案整理</h3>
+    <div class="tag-list">
+        <span class="tag">高风险替代</span>
+        <span class="tag">重复劳动</span>
+        <span class="tag">2026淘汰</span>
+    </div>
+    <p>AI可自动完成表格处理、文件归档、公文撰写、数据录入，效率是人工10倍以上，2026年基础文职岗位将大规模缩减。</p>
+</div>
+
+<!-- 2. 设计创作类 -->
+<div class="card" data-type="design">
+    <iframe class="iframe-video" src="https://player.bilibili.com/player.html?aid=11345456&cid=20000000&page=2" allowfullscreen></iframe>
+    <div class="ai-comment">🤖 AI局势解说：初级美工、剪辑师被AI批量替代，入门门槛彻底消失。AI做量产模板，人类必须做创意、品牌、定制化设计。只会套模板的设计师2026年将大量失业。</div>
+    <h3>设计创作类｜平面美工/简单剪辑/配图</h3>
+    <div class="tag-list">
+        <span class="tag">AI生成</span>
+        <span class="tag">初级设计</span>
+        <span class="tag">失业风险</span>
+    </div>
+    <p>AI绘图、AI剪辑可一键出海报、短视频、配图，基础美工、剪辑师岗位被快速替代，仅高端创意岗位留存。</p>
+</div>
+
+<!-- 3. 服务基础类 -->
+<div class="card" data-type="service">
+    <iframe class="iframe-video" src="https://player.bilibili.com/player.html?aid=11345456&cid=20000000&page=3" allowfullscreen></iframe>
+    <div class="ai-comment">🤖 AI局势解说：基础客服、电销是AI替代最成熟的赛道，成本仅人工1/10。电商、金融、运营商已全面上线AI客服。转向情绪价值、高端服务、线下体验类岗位。</div>
+    <h3>基础服务类｜在线客服/电销/调度分拣</h3>
+    <div class="tag-list">
+        <span class="tag">AI客服</span>
+        <span class="tag">重复性沟通</span>
+        <span class="tag">自动化替代</span>
+    </div>
+    <p>AI语音客服、智能外呼24小时工作，电商客服、电话销售、物流分拣调度，2026年80%基础服务岗位被AI接管。</p>
+</div>
+
+<!-- 4. 技术编程类 -->
+<div class="card" data-type="tech">
+    <iframe class="iframe-video" src="https://player.bilibili.com/player.html?aid=11345456&cid=20000000&page=4" allowfullscreen></iframe>
+    <div class="ai-comment">🤖 AI局势解说：初级代码工、CRUD程序员正在被AI快速淘汰。AI写基础代码，人类负责架构、业务、复杂逻辑。程序员必须往高阶、架构、AI训练方向升级。</div>
+    <h3>技术编程类｜初级开发/测试/代码搬运</h3>
+    <div class="tag-list">
+        <span class="tag">AI写代码</span>
+        <span class="tag">初级程序员</span>
+        <span class="tag">技术内卷</span>
+    </div>
+    <p>AI可生成基础代码、自动化测试、编写接口文档，只会CRUD的初级程序员岗位大幅缩减，高端架构岗更吃香。</p>
+</div>
+
+    </div>
+</div>
+
+<div class="footer">
+    <p>© 2026 AI替代工作深度解说站｜谷歌广告（注册AdSense后替换ID自动变现）</p>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-【你的谷歌ID】" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-【你的谷歌ID】" data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+</div>
+
+<script>
+// 深色模式
+const toggle = document.getElementById('themeBtn');
+toggle.onclick = ()=>{
+    document.body.toggleAttribute('data-theme','dark');
+    toggle.innerText = document.body.hasAttribute('data-theme') ? '☀️' : '🌙';
+}
+
+// 分类筛选
+const list = document.getElementById('cardList');
+const cards = list.querySelectorAll('.card');
+document.querySelector('[data-all]').onclick = ()=>cards.forEach(c=>c.style.display='block');
+document.querySelector('[data-office]').onclick = ()=>cards.forEach(c=>c.style.display = c.dataset.type==='office' ? 'block' : 'none');
+document.querySelector('[data-design]').onclick = ()=>cards.forEach(c=>c.style.display = c.dataset.type==='design' ? 'block' : 'none');
+document.querySelector('[data-service]').onclick = ()=>cards.forEach(c=>c.style.display = c.dataset.type==='service' ? 'block' : 'none');
+document.querySelector('[data-tech]').onclick = ()=>cards.forEach(c=>c.style.display = c.dataset.type==='tech' ? 'block' : 'none');
+
+// 搜索
+const sbtn = document.getElementById('searchBtn');
+const kw = document.getElementById('searchInput');
+sbtn.onclick = ()=>{
+    const key = kw.value.toLowerCase();
+    cards.forEach(c=>c.style.display = c.innerText.toLowerCase().includes(key) ? 'block' : 'none');
+}
+kw.onkeyup = e=>e.key==='Enter'&&sbtn.click();
+</script>
+</body>
+</html>
